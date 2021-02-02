@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springjwt
+    username: root
+    password:
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+
+avrm.app:
+  jwtSecret: secretKey
+  jwtExpirationMs: 8640000     #     = 144 minutes
