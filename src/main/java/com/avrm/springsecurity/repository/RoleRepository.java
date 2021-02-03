@@ -1,13 +1,15 @@
 package com.avrm.springsecurity.repository;
 
-import com.avrm.springsecurity.model.User;
+import com.avrm.springsecurity.model.ERole;
+import com.avrm.springsecurity.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-public interface RoleRepository extends JpaRepository<User, Long> {
+@Repository
+public interface RoleRepository extends JpaRepository<Role, Long> {
 
-    Optional<User> findByUsername(String username);
-    Boolean existByUsername(String username);
-    Boolean existEmail(String email);
+    Optional<Role> findByName(ERole name);
+
 }
